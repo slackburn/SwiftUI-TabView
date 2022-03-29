@@ -11,7 +11,13 @@ import SwiftUI
 struct SwiftUI_TabViewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                FirstContentView()
+                SecondContentView()
+                ThirdContentView()
+            }
+            .tabViewStyle(PageTabViewStyle())
+            .background(.green)
         }
     }
 }
